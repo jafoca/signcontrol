@@ -1,0 +1,8 @@
+---
+:orm: mongomapper
+:test: none
+:mock: none
+:script: jquery
+:renderer: erb
+:stylesheet: less
+:admin_renderer: erb
