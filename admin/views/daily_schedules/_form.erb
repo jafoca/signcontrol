@@ -1,0 +1,15 @@
+<div class="group">
+  <%= f.label :meeting_1 %><%= f.error_message_on :meeting_1 %>
+  <%= f.text_area :meeting_1, :class => :text_field %>
+  <span class="description">Ex: a simple text</span>
+</div>
+<div class="group">
+  <%= f.label :meeting_2 %><%= f.error_message_on :meeting_2 %>
+  <%= f.text_area :meeting_2, :class => :text_field %>
+  <span class="description">Ex: a simple text</span>
+</div>
+
+<div class="group navform wat-cf">
+  <%= f.submit pat(:save), :class => :button %>
+  <%= f.submit pat(:cancel), :onclick => "window.location='#{url(:daily_schedules, :index)}';return false", :class => :button %>
+</div>

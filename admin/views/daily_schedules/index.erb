@@ -1,0 +1,38 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first active"><%= link_to pat(:list), url(:daily_schedules, :index) %></li>
+      <li><%= link_to pat(:new), url(:daily_schedules, :new) %></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2 class="title"><%= pat(:all) %> <% mt(:daily_schedules) %></h2>
+    <div class="inner">
+      <table class="table">
+        <tr>
+          <th class="first"><%= mat(:daily_schedule, :meeting_1) %></th>
+          <th><%= mat(:daily_schedule, :meeting_2) %></th>
+          <th><%= mat(:daily_schedule, :created_at) %></th>
+          <th><%= mat(:daily_schedule, :updated_at) %></th>
+          <th class="last">&nbsp;</th>
+        </tr>
+        <% @daily_schedules.each do |daily_schedule| %>
+        <tr>
+          <td class="first"><%= daily_schedule.meeting_1 %></td>
+          <td><%= daily_schedule.meeting_2 %></td>
+          <td><%= daily_schedule.created_at %></td>
+          <td><%= daily_schedule.updated_at %></td>
+          <td class="last">
+            <%= button_to pat(:edit), url(:daily_schedules, :edit, :id => daily_schedule.id), :method => :get, :class => :button_to %> |
+            <%= button_to pat(:delete), url(:daily_schedules, :destroy, :id => daily_schedule.id), :method => :delete, :class => :button_to, :onsubmit => "return confirm('#{pat(:confirm)}')" %>
+          </td>
+        </tr>
+        <% end %>
+      </table>
+      <div class="actions-bar wat-cf">
+        <div class="actions"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :sidebar, partial("base/sidebar") %>

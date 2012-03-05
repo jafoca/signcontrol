@@ -1,0 +1,18 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first"><%= link_to pat(:list), url(:daily_schedules, :index) %></li>
+      <li><%= link_to pat(:new), url(:daily_schedules, :new) %></li>
+      <li class="active"><%= link_to pat(:edit), url(:daily_schedules, :edit, :id => @daily_schedule.id) %></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2 class="title"><%= pat(:edit) %> <% mt(:daily_schedule) %></h2>
+    <div class="inner">
+      <% form_for :daily_schedule, url(:daily_schedules, :update, :id => @daily_schedule.id), :method => :put, :class => :form do |f| %>
+        <%= partial "daily_schedules/form", :locals => { :f => f } %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% content_for :sidebar, partial("base/sidebar") %>
