@@ -10,6 +10,7 @@ class Signcontrol < Padrino::Application
   get "/" do
     "Hello foo"
   end
+  
   get :about, :map =>'/about_us' do
     render :haml, "%p This is the stuff"
   end
