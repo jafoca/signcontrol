@@ -32,6 +32,7 @@ Signcontrol.controllers :daily_schedules do
   end
   
   get :rss_static do
+    @schedule = DailySchedule.all.last
     render 'daily_schedules/rss_static'
   end
 

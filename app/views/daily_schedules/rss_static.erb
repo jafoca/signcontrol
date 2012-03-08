@@ -2,15 +2,37 @@
 <rss version="2.0">
 
 <channel>
-  <title>m1t</title>
-  <description>Free web building tutorials</description>
+  <item>
+    <title>m1t</title>
+    <description><%= @schedule.date %> | <%= Date.today %></description>
+  </item>
   <item>
     <title>m1d1</title>
-    <description>Guillermo!</description>
+    <description><%= @schedule.m1d1 %></description>
   </item>
   <item>
     <title>m1d2</title>
-    <description>stuff and things!</description>
+    <description><%= @schedule.m1d2 %></description>
+  </item>
+  <title>m2t</title>
+  <description><%= @schedule.m2t%></description>
+  <item>
+    <title>m2d1</title>
+    <description><%= @schedule.m2d1 %></description>
+  </item>
+  <item>
+    <title>m2d2</title>
+    <description><%= @schedule.m2d2 %></description>
+  </item>
+  <title>m3t</title>
+  <description><%= @schedule.m3t%></description>
+  <item>
+    <title>m3d1</title>
+    <description><%= @schedule.m3d1 %></description>
+  </item>
+  <item>
+    <title>m3d2</title>
+    <description><%= @schedule.m3d2 %></description>
   </item>
 </channel>
 
