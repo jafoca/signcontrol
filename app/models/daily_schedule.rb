@@ -1,8 +1,9 @@
 class DailySchedule
   include MongoMapper::Document
 
+  
   # key <name>, <type>
-  key :date, Date, :required => true
+  key :date, Time, :unique => true
   
   key :m1t, String
   key :m1d1, String

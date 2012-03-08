@@ -11,24 +11,6 @@
       <table class="table">
         <tr>
           <th class="first"><%= mat(:daily_schedule, :date) %></th>
-          <th><%= mat(:daily_schedule, :m1t) %></th>
-          <th><%= mat(:daily_schedule, :m1d1) %></th>
-          <th><%= mat(:daily_schedule, :m1d2) %></th>
-          <th><%= mat(:daily_schedule, :m2t) %></th>
-          <th><%= mat(:daily_schedule, :m2d1) %></th>
-          <th><%= mat(:daily_schedule, :m2d2) %></th>
-          <th><%= mat(:daily_schedule, :m3t) %></th>
-          <th><%= mat(:daily_schedule, :m3d1) %></th>
-          <th><%= mat(:daily_schedule, :m3d2) %></th>
-          <th><%= mat(:daily_schedule, :m4t) %></th>
-          <th><%= mat(:daily_schedule, :m4d1) %></th>
-          <th><%= mat(:daily_schedule, :m4d2) %></th>
-          <th><%= mat(:daily_schedule, :m5t) %></th>
-          <th><%= mat(:daily_schedule, :m5d1) %></th>
-          <th><%= mat(:daily_schedule, :m5d2) %></th>
-          <th><%= mat(:daily_schedule, :m6t) %></th>
-          <th><%= mat(:daily_schedule, :m6d1) %></th>
-          <th><%= mat(:daily_schedule, :m6d2) %></th>
           <th><%= mat(:daily_schedule, :created_at) %></th>
           <th><%= mat(:daily_schedule, :updated_at) %></th>
           <th class="last">&nbsp;</th>
@@ -36,24 +18,7 @@
         <% @daily_schedules.each do |daily_schedule| %>
         <tr>
           <td class="first"><%= daily_schedule.date %></td>
-          <td><%= daily_schedule.m1t %></td>
-          <td><%= daily_schedule.m1d1 %></td>
-          <td><%= daily_schedule.m1d2 %></td>
-          <td><%= daily_schedule.m2t %></td>
-          <td><%= daily_schedule.m2d1 %></td>
-          <td><%= daily_schedule.m2d2 %></td>
-          <td><%= daily_schedule.m3t %></td>
-          <td><%= daily_schedule.m3d1 %></td>
-          <td><%= daily_schedule.m3d2 %></td>
-          <td><%= daily_schedule.m4t %></td>
-          <td><%= daily_schedule.m4d1 %></td>
-          <td><%= daily_schedule.m4d2 %></td>
-          <td><%= daily_schedule.m5t %></td>
-          <td><%= daily_schedule.m5d1 %></td>
-          <td><%= daily_schedule.m5d2 %></td>
-          <td><%= daily_schedule.m6t %></td>
-          <td><%= daily_schedule.m6d1 %></td>
-          <td><%= daily_schedule.m6d2 %></td>
+
           <td><%= daily_schedule.created_at %></td>
           <td><%= daily_schedule.updated_at %></td>
           <td class="last">

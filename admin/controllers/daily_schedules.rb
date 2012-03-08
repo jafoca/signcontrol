@@ -1,5 +1,6 @@
 Admin.controllers :daily_schedules do
 
+    
   get :index do
     @daily_schedules = DailySchedule.all
     render 'daily_schedules/index'
