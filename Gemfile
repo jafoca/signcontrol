@@ -16,6 +16,8 @@ gem 'mongo_mapper'
 gem 'bson_ext', :require => "mongo"
 
 # Test requirements
+#Timezone support
+gem 'tzinfo'
 
 # Padrino Stable Gem
 gem 'padrino', '0.10.5'

@@ -3,7 +3,7 @@ class DailySchedule
 
   
   # key <name>, <type>
-  key :date, Date
+  key :date, String, :unique => true
   
   key :m1t, String
   key :m1d1, String
@@ -30,4 +30,6 @@ class DailySchedule
   key :m6d2, String
   
   timestamps!
+  
+  validates_format_of :date, :with => /^\d{4}\-\d{2}\-\d{2}$/
 end
