@@ -3,7 +3,7 @@ class DailySchedule
 
   
   # key <name>, <type>
-  key :date, Time, :unique => true
+  key :date, Date
   
   key :m1t, String
   key :m1d1, String
