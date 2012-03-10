@@ -98,6 +98,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport
   bcrypt-ruby
   bson_ext
   erubis (~> 2.7.0)
