@@ -2,7 +2,7 @@ Admin.controllers :daily_schedules do
 
     
   get :index do
-    @daily_schedules = DailySchedule.all(:date.gte => Date.today.to_s)
+    @daily_schedules = DailySchedule.where(:date.gte => Date.today.to_s).sort(:date)
     render 'daily_schedules/index'
   end
 

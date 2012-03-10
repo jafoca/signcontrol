@@ -29,7 +29,11 @@ class Admin < Padrino::Application
     role.protect "/"
     role.allow "/sessions"
   end
-
+  
+  access_control.roles_for :user do |role|
+    role.project_module :daily_schedules, "/daily_schedules"
+  end
+    
   access_control.roles_for :admin do |role|
     role.project_module :daily_schedules, "/daily_schedules"
     role.project_module :accounts, "/accounts"
