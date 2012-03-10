@@ -32,7 +32,7 @@ Signcontrol.controllers :daily_schedules do
   end
   
   get :rss_static do
-    @schedule = DailySchedule.first(:date => Time.zone.today.to_s)
+    @schedule = DailySchedule.first(:date => Date.today.to_s)
     if @schedule
       render 'daily_schedules/rss_static'
     else
