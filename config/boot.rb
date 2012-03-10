@@ -18,13 +18,14 @@ Bundler.require(:default, PADRINO_ENV)
 # Add your before load hooks here
 #
 Padrino.before_load do
-  Time.zone = 'Central Time (US & Canada)' 
+  Time.zone = 'Eastern Time (US & Canada)' 
 end
 
 ##
 # Add your after load hooks here
 #
 Padrino.after_load do
+  Time.zone = 'Eastern Time (US & Canada)'
 end
 
 Padrino.load!
