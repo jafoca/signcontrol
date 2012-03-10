@@ -2,7 +2,7 @@ Admin.controllers :daily_schedules do
 
     
   get :index do
-    @daily_schedules = DailySchedule.all
+    @daily_schedules = DailySchedule.all(:date.gte => Time.zone.today.to_s)
     render 'daily_schedules/index'
   end
 

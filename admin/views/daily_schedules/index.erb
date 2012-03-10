@@ -17,8 +17,7 @@
         </tr>
         <% @daily_schedules.each do |daily_schedule| %>
         <tr>
-          <td class="first"><%= daily_schedule.date %></td>
-
+          <td class="first"><%= Date::DAYNAMES[daily_schedule.date.to_date.wday] %> | <%= daily_schedule.date %></td>
           <td><%= daily_schedule.created_at %></td>
           <td><%= daily_schedule.updated_at %></td>
           <td class="last">
