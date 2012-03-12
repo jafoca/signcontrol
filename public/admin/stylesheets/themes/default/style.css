@@ -60,16 +60,20 @@ hr {
 
 #header h1 {
   padding: 15px 0;
-  font-size: 28px;
+  font-size: 40px;
   font-style: normal;
   font-weight: bold;
   text-transform: normal;
   letter-spacing: -1px;
-  line-height: 1.2em;
+  line-height: 50px;
+  color: #c9c9c9;
+}
+#header h1 #armory_logo{
+	margin: 20px  10px -10px 0;
 }
 
 #header h1 a:link, #header h1 a:active, #header h1 a:hover, #header h1 a:visited {
-  color: #FFF;
+  color: #c9c9c9;
 }
 
 #user-navigation {
