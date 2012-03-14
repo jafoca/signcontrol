@@ -10,15 +10,15 @@
     <div class="inner">
       <table class="table">
         <tr>
-          <th class="first"><%= mat(:daily_schedule, :date) %></th>
-          <th><%= mat(:daily_schedule, :created_at) %></th>
-          <th><%= mat(:daily_schedule, :updated_at) %></th>
+          <th class="first"><%= mat(:daily_schedule, :day) %></th>
+          <th><%= mat(:daily_schedule, :date) %></th>
+		  <th><%= mat(:daily_schedule, :updated_at) %></th>
           <th class="last">&nbsp;</th>
         </tr>
         <% @daily_schedules.each do |daily_schedule| %>
         <tr>
-          <td class="first"><%= Date::DAYNAMES[daily_schedule.date.to_date.wday] %> | <%= daily_schedule.date %></td>
-          <td><%= daily_schedule.created_at %></td>
+          <td class="first"><%= Date::DAYNAMES[daily_schedule.date.to_date.wday] %></td>
+		  <td><%= daily_schedule.date %></td>
           <td><%= daily_schedule.updated_at %></td>
           <td class="last">
             <%= button_to pat(:edit), url(:daily_schedules, :edit, :id => daily_schedule.id), :method => :get, :class => :button_to %> |

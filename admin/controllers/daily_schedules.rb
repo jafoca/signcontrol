@@ -1,17 +1,20 @@
 Admin.controllers :daily_schedules do
-
+ 
     
   get :index do
+    @today = DailySchedule.first(:date => Date.today.to_s)
     @daily_schedules = DailySchedule.where(:date.gte => Date.today.to_s).sort(:date)
     render 'daily_schedules/index'
   end
 
   get :new do
+    @today = DailySchedule.first(:date => Date.today.to_s)
     @daily_schedule = DailySchedule.new
     render 'daily_schedules/new'
   end
 
   post :create do
+    @today = DailySchedule.first(:date => Date.today.to_s)
     @daily_schedule = DailySchedule.new(params[:daily_schedule])
     if @daily_schedule.save
       flash[:notice] = 'DailySchedule was successfully created.'
@@ -22,6 +25,7 @@ Admin.controllers :daily_schedules do
   end
 
   get :edit, :with => :id do
+    @today = DailySchedule.first(:date => Date.today.to_s)
     @daily_schedule = DailySchedule.find(params[:id])
     render 'daily_schedules/edit'
   end

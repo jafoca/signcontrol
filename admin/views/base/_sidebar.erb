@@ -1,10 +1,35 @@
-<!--
 <div class="block">
-  <h3>Simple Block</h3>
+  <h3>Today</h3>
   <div class="content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	<% if @today %>
+		<h4><%= @today.m1t %></h4>
+		<p><%= @today.m1d1 %></p>
+		<p><%= @today.m1d2 %></p>
+		
+		<h4><%= @today.m2t %></h4>
+		<p><%= @today.m2d1 %></p>
+		<p><%= @today.m2d2 %></p>
+		
+		<h4><%= @today.m3t %></h4>
+		<p><%= @today.m3d1 %></p>
+		<p><%= @today.m3d2 %></p>
+		
+		<h4><%= @today.m4t %></h4>
+		<p><%= @today.m4d1 %></p>
+		<p><%= @today.m4d2 %></p>
+		
+		<h4><%= @today.m5t %></h4>
+		<p><%= @today.m5d1 %></p>
+		<p><%= @today.m5d2 %></p>
+		
+		<%= button_to pat(:edit), url(:daily_schedules, :edit, :id => @today.id), :method => :get, :class => :button_to %>	
+	<% else %>
+		<%= link_to pat(:new), url(:daily_schedules, "Set Today's Schedule") %>
+	<% end %>
+    <p></p>
   </div>
-</div>-->
+</div>
+
 <div class="block">
   <h3>Support</h3>
   <ul class="navigation">
