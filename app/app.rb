@@ -5,12 +5,12 @@ class Signcontrol < Padrino::Application
   register Padrino::Helpers
 
   enable :sessions
-  
-  
+
+
   get "/" do
-    "Hello"
+    "Hello person"
   end
-  
+
   ##
   # Caching support
   #
