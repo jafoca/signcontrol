@@ -1,4 +1,5 @@
-source :rubygems
+source "https://rubygems.org"
+ruby "2.0.0"
 
 # Server requirements (defaults to WEBrick)
 # gem 'thin'
@@ -12,7 +13,7 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'bcrypt-ruby', :require => "bcrypt"
 gem 'rack-less', "~>2.0.2"
 gem 'erubis', "~> 2.7.0"
-gem 'mongo_mapper'
+gem 'mongo_mapper', :github => "jnunemaker/mongomapper"
 gem 'bson_ext', :require => "mongo"
 
 # Test requirements
@@ -22,6 +23,7 @@ gem 'tzinfo'
 gem "activesupport"
 
 # Padrino Stable Gem
+
 gem 'padrino', '0.11.4'
 
 # Or Padrino Edge

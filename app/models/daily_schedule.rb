@@ -31,5 +31,5 @@ class DailySchedule
   
   timestamps!
   
-  validates_format_of :date, :with => /^\d{4}\-\d{2}\-\d{2}$/
+  validates_format_of :date, :with => /\A\d{4}\-\d{2}\-\d{2}\z/
 end
